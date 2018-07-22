@@ -1,7 +1,11 @@
 # GCP/GCPD - A gRPC implementation of scp
+A simple secure file copy implementation in gRPC.
+
+## How it works
+![GCPD](/gcpd.png)
 
 
-### Recap/Summary of 4 types gRPC implementations
+## Reference/Summary of 4 types gRPC implementations
 
 | Proto                                            | Client side                         | Server side                                  |
 |:------------------------------------------------:|:-----------------------------------:|:--------------------------------------------:|
