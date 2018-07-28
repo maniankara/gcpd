@@ -1,7 +1,33 @@
 #!/bin/bash
+#  Copyright 2018 Anoop Vijayan Maniankara
+# 
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+# 
+#      http://www.apache.org/licenses/LICENSE-2.0
+# 
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+# Test your changes locally before commiting
+# 
+# Instructions:
+#   - Install circleci cli
+#       $ curl -o /usr/local/bin/circleci https://circle-downloads.s3.amazonaws.com/releases/build_agent_wrapper/circleci && chmod +x /usr/local/bin/circleci
+#   - Run circleci.sh
+#       $ ./circleci.sh
 
-# Validate
-circleci config validate -c .circleci/config.yml || exit -1
 
-# Run
-circleci build
+function main {
+    # Validate
+    circleci config validate -c .circleci/config.yml || exit -1
+
+    # Execute
+    circleci build
+}
+
+main $*
